@@ -40,7 +40,7 @@
   <img alt="design" src="https://github.com/CodeAkio/cataline-faq-vuex/blob/master/.github/manual_marca.png" width="100%">
 </p>
 
-<p><strong>Adobe XD: </strong>[Node.js](https://nodejs.org/pt-br/)</p>
+<p><strong>Adobe XD: </strong><a href="https://xd.adobe.com/view/43004fbd-7dfc-4765-9d78-21b38e5011b5-1653/">link</a></p>
 
 ## Tecnologias
 
