@@ -70,11 +70,6 @@ cd cataline-faq-vuex
 yarn install
 ```
 
-3. Inicie o "back-end":
-```console
-json-server db.json -p 3333
-```
-
 4. Inicie a aplicação web:
 ```console
 yarn serve
