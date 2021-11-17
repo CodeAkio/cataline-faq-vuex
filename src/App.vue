@@ -1,16 +1,20 @@
 <template>
   <div class="container">
-    <Card />
+    <Card>
+      <Categories />
+    </Card>
   </div>
 </template>
 
 <script>
 import Card from '@/components/Card'
+import Categories from '@/pages/Categories'
 
 export default {
   name: 'App',
   components: {
-    Card
+    Card,
+    Categories
   }
 }
 </script>
