@@ -12,20 +12,39 @@
     </div>
 
     <ul>
-      <OptionButton icon="rocket.svg" text="Basecamp" />
-      <OptionButton icon="astronaut-helmet.svg" text="Bootcamp" />
-      <OptionButton icon="student-hat.svg" text="Cataline" />
-      <OptionButton icon="partnership.svg" text="Parcerias" />
+      <OptionButton
+        v-for="categories in $allCategories"
+        :key="categories.id"
+        :icon="categories.icon"
+        :text="categories.title"
+      />
     </ul>
   </div>
 </template>
 
 <script>
-// import { mapMutations } from 'vuex'
+import { mapMutations } from 'vuex'
 import OptionButton from '@/components/OptionButton'
+
 export default {
   name: 'Categories',
-  components: { OptionButton }
+  components: { OptionButton },
+  data() {
+    return {
+      id: 0
+    }
+  },
+  computed: {
+    $allCategories() {
+      return this.$store.getters.$allCategories
+    }
+  },
+  methods: {
+    ...mapMutations(['changeView', 'myQuestionId'])
+  },
+  created() {
+    this.$store.dispatch('fetchCategories')
+  }
 }
 </script>
 
